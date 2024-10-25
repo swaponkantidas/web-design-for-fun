@@ -1,0 +1,83 @@
+/* Basic page styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Dark background */
+    color: #ffffff;
+}
+
+/* Header colors */
+h1, h2 {
+    color: #0056b3;
+}
+
+/* Section styling */
+.section {
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+    color: white;
+}
+
+/* Quote box styles */
+#quote-box {
+    position: fixed;
+    top: 50%;
+    right: 10%;
+    width: 300px;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #00ccff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transform: translateY(-50%); /* Centers vertically */
+    text-align: center;
+    transition: opacity 1s ease-in-out; /* Fades between quotes */
+}
+
+#quote-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#quote-author {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Navigation bar styling */
+nav {
+    text-align: right;
+    background-color: #1c1c1c;
+    padding: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Responsive quote box */
+@media (max-width: 768px) {
+    #quote-box {
+        width: 80%;
+        right: 10%;
+    }
+}
