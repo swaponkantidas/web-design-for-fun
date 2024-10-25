@@ -1,83 +1,74 @@
-/* Basic page styling */
+/* General body and text settings */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Dark background */
-    color: #ffffff;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text for visibility */
 }
 
-/* Header colors */
+/* Heading colors */
 h1, h2 {
-    color: #0056b3;
+    color: #0056b3; /* Header color */
 }
 
-/* Section styling */
+/* Section styling with reduced margins */
 .section {
-    margin: 0 auto;
-    padding: 20px;
     width: 80%;
+    margin: 0 auto; /* Center content */
+    padding: 10px 0; /* Reduced padding */
     color: white;
 }
 
-/* Quote box styles */
+/* Individual section spacing adjustments */
+#intro, #education, #skills, #contact {
+    margin-bottom: 20px; /* Smaller spacing between sections */
+}
+
+/* Profile photo and container */
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    border: 2px solid #00ccff;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Quote box styling */
 #quote-box {
-    position: fixed;
-    top: 50%;
-    right: 10%;
-    width: 300px;
+    background-color: #1c1c1c; /* Dark background */
+    color: #ffffff;
+    border-radius: 8px;
     padding: 20px;
-    background-color: #1c1c1c;
-    color: #00ccff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-    transform: translateY(-50%); /* Centers vertically */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px; /* Limit width to avoid overlap */
+    position: fixed;
+    right: 20px;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 10; /* Ensure it’s on top */
     text-align: center;
-    transition: opacity 1s ease-in-out; /* Fades between quotes */
-}
-
-#quote-text {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-#quote-author {
     font-size: 16px;
-    font-style: italic;
 }
 
-/* Navigation bar styling */
-nav {
-    text-align: right;
-    background-color: #1c1c1c;
-    padding: 10px;
+/* Animation: fading between quotes */
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+#quote-box p {
+    animation: fadeInOut 30s infinite; /* Fade animation for quotes */
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #1c1c1c;
-    color: #ffffff;
-    font-size: 14px;
-    width: 100%;
-}
-
-/* Responsive quote box */
+/* Responsive behavior */
 @media (max-width: 768px) {
     #quote-box {
-        width: 80%;
-        right: 10%;
+        position: static; /* Normal flow on mobile */
+        transform: none;
+        max-width: 100%; /* Full width on mobile */
+        margin: 20px auto;
+        text-align: center;
     }
 }
